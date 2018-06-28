@@ -31,4 +31,26 @@ class NetworkService {
             
             }.resume()
     }
+    
+    
+    func fetchDetailedApp(id: Int, completion: @escaping (App) -> Void) {
+        let urlString = "https://api.letsbuildthatapp.com/appstore/appdetail?id=\(id)"
+        URLSession.shared.dataTask(with: URL(string: urlString)!) { (data, response, error) -> Void in
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            guard let data = data else {return}
+            
+            do {
+                let jsonDecoder = JSONDecoder()
+                let serverResponse = try jsonDecoder.decode(App.self, from: data)
+                completion(serverResponse)
+            } catch let err {
+                print(err)
+            }
+            
+            }.resume()
+    }
 }

@@ -59,6 +59,9 @@ struct App: Decodable {
     var imageName: String?
     var category: String?
     var price: Double?
+    var screenshots: [String]?
+    var description: String?
+    var appInfomation: AppInformation?
     
     enum CodingKeys: String, CodingKey {
         case id = "Id"
@@ -66,5 +69,18 @@ struct App: Decodable {
         case imageName = "ImageName"
         case category = "Category"
         case price = "Price"
+        case screenshots = "Screenshots"
+        case description = "description"
+        case appInfomation = "appInfomation"
+    }
+}
+
+struct AppInformation: Decodable {
+    var name: String?
+    var value: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case value = "Value"
+        case name = "Name"
     }
 }
