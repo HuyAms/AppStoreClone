@@ -15,6 +15,8 @@
 		C35A5EEF20E4B18B0040D17C /* AppStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A5EEE20E4B18B0040D17C /* AppStoreTests.swift */; };
 		C35A5EFA20E4B18B0040D17C /* AppStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A5EF920E4B18B0040D17C /* AppStoreUITests.swift */; };
 		C35A5F0820E4BB010040D17C /* CategeoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A5F0720E4BB010040D17C /* CategeoryCell.swift */; };
+		C35A5F0A20E4D2650040D17C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A5F0920E4D2650040D17C /* Models.swift */; };
+		C35A5F0C20E4DE310040D17C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A5F0B20E4DE310040D17C /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C35A5EF920E4B18B0040D17C /* AppStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreUITests.swift; sourceTree = "<group>"; };
 		C35A5EFB20E4B18B0040D17C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C35A5F0720E4BB010040D17C /* CategeoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategeoryCell.swift; sourceTree = "<group>"; };
+		C35A5F0920E4D2650040D17C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		C35A5F0B20E4DE310040D17C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				C35A5ED820E4B18B0040D17C /* AppStore */,
-				C35A5EED20E4B18B0040D17C /* AppStoreTests */,
 				C35A5EF820E4B18B0040D17C /* AppStoreUITests */,
 				C35A5ED720E4B18B0040D17C /* Products */,
 			);
@@ -99,13 +102,16 @@
 		C35A5ED820E4B18B0040D17C /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
+				C35A5F0920E4D2650040D17C /* Models.swift */,
 				C35A5ED920E4B18B0040D17C /* AppDelegate.swift */,
 				C35A5EDB20E4B18B0040D17C /* FeaturedAppController.swift */,
 				C35A5F0720E4BB010040D17C /* CategeoryCell.swift */,
+				C35A5F0B20E4DE310040D17C /* NetworkService.swift */,
 				C35A5EDD20E4B18B0040D17C /* Main.storyboard */,
 				C35A5EE020E4B18B0040D17C /* Assets.xcassets */,
 				C35A5EE220E4B18B0040D17C /* LaunchScreen.storyboard */,
 				C35A5EE520E4B18B0040D17C /* Info.plist */,
+				C35A5EED20E4B18B0040D17C /* AppStoreTests */,
 			);
 			path = AppStore;
 			sourceTree = "<group>";
@@ -262,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35A5F0C20E4DE310040D17C /* NetworkService.swift in Sources */,
 				C35A5EDC20E4B18B0040D17C /* FeaturedAppController.swift in Sources */,
 				C35A5EDA20E4B18B0040D17C /* AppDelegate.swift in Sources */,
 				C35A5F0820E4BB010040D17C /* CategeoryCell.swift in Sources */,
+				C35A5F0A20E4D2650040D17C /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
