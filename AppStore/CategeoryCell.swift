@@ -15,6 +15,8 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
             if let name = appCategory?.name {
                 nameLabel.text = name
             }
+            
+            appCollectionView.reloadData()
         }
     }
     
