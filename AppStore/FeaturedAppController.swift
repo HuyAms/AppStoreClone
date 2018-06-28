@@ -38,6 +38,12 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
         collectionView?.register(Header.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
     }
     
+    func showAppDetailForApp(app: App) {
+        let appDetailController = AppDetailController(collectionViewLayout: UICollectionViewFlowLayout())
+        appDetailController.app = app
+        navigationController?.pushViewController(appDetailController, animated: true)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let count =  appCategories?.count {
             return count
@@ -49,11 +55,13 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
         if indexPath.item == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largeCellId, for: indexPath) as! LargeCategoryCell
             cell.appCategory = appCategories?[indexPath.item]
+            cell.featuredAppsController = self
             return cell
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
         cell.appCategory = appCategories?[indexPath.item]
+        cell.featuredAppsController = self
         
         return cell
     }
